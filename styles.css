@@ -1,0 +1,56 @@
+/* || Universal Styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+:root {
+  /* Primary */
+
+  --Blue500: hsl(215, 51%, 70%);
+  --Cyan400: hsl(178, 100%, 50%);
+
+  /* Neutral */
+
+  --Blue950: hsl(217, 54%, 11%);
+  --Blue900: hsl(216, 50%, 16%);
+  --Blue800: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+
+  /* Font Weights */
+  --FontWeight300: 300;
+  --FontWeight400: 400;
+  --FontWeight600: 600;
+}
+
+body {
+  background-color: var(--Blue950);
+}
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ... */
+
+/* || Card Container */
+
+.card-container {
+  height: 75%;
+  width: 85%;
+  background-color: var(--Blue900);
+  padding: 1.5em;
+  border-radius: 0.8em;
+}
+
+.main-img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.6em;
+}
+
+/* ... */
