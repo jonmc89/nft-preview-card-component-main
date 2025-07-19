@@ -11,6 +11,7 @@
 
   --Blue500: hsl(215, 51%, 70%);
   --Cyan400: hsl(178, 100%, 50%);
+  --ImageOverlay: hsla(178, 100%, 50%, 0.626);
 
   /* Neutral */
 
@@ -27,6 +28,7 @@
 
 body {
   background-color: var(--Blue950);
+  font-family: "Outfit", sans-serif, serif;
 }
 .main-container {
   width: 100%;
@@ -37,20 +39,159 @@ body {
 }
 /* ... */
 
+/* || Typography */
+
+.card-text {
+  margin-bottom: 1em;
+}
+
+h1,
+.profile-name {
+  color: var(--White);
+}
+
+.profile-name {
+  transition: color 0.2s ease-in-out;
+}
+
+.profile-name:hover {
+  color: var(--Cyan400);
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 1.4em;
+  font-weight: var(--FontWeight600);
+  margin-bottom: 1em;
+  transition: color 0.2s ease-in-out;
+}
+
+h1:hover {
+  color: var(--Cyan400);
+  cursor: pointer;
+}
+
+.card-text {
+  font-size: 1em;
+  color: var(--Blue800);
+  line-height: 150%;
+  font-weight: var(--FontWeight300);
+}
+
+.author {
+  color: var(--Blue500);
+}
+
+/* ... */
+
 /* || Card Container */
 
 .card-container {
-  height: 75%;
+  height: auto;
   width: 85%;
   background-color: var(--Blue900);
   padding: 1.5em;
   border-radius: 0.8em;
 }
 
+/* ... */
+
+/* || Card Image */
+.img-container {
+  position: relative;
+}
+
 .main-img {
   width: 100%;
   height: auto;
   border-radius: 0.6em;
+  margin-bottom: 1em;
+}
+
+.img-overlay {
+  position: absolute;
+  width: 100%;
+  height: 20.2em;
+  background-color: var(--ImageOverlay);
+  z-index: 1;
+  border-radius: 0.6em;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.img-overlay:hover {
+  opacity: 100%;
+}
+
+.eye-img {
+  width: 4em;
+  height: 4em;
+}
+
+/* ... */
+
+/* || Stats Container */
+
+.stats-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.4em;
+}
+
+.ethereum-container {
+  display: flex;
+}
+
+.time-left-container {
+  display: flex;
+}
+
+.ethereum-img {
+  margin-right: 0.5em;
+  width: 0.8em;
+  height: auto;
+}
+
+.ethereum-price {
+  color: var(--Cyan400);
+}
+
+.days-img {
+  margin-right: 0.5em;
+  width: 1.2em;
+  height: auto;
+}
+
+.days-left {
+  color: var(--Blue500);
+}
+
+hr {
+  margin-bottom: 1.4em;
+  border-color: var(--Blue800);
+}
+
+/* ... */
+
+/* || Profile Container */
+
+.profile-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.profile-img {
+  width: auto;
+  height: 3em;
+  margin-right: 1em;
+  border: 1px solid var(--White);
+  border-radius: 50%;
 }
 
 /* ... */
