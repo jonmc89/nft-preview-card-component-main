@@ -8,43 +8,161 @@
 
 :root {
   --blue-500: hsl(215, 51%, 70%);
-  --cyan-400: hsl(178, 100%, 50%);
   --blue-950: hsl(217, 54%, 11%);
   --blue-900: hsl(216, 50%, 16%);
   --blue-800: hsl(215, 32%, 27%);
+  --cyan-400: hsl(178, 100%, 50%);
   --white: hsl(0, 0%, 100%);
+  --text-preset-1-fs: 22px;
+  --text-preset-1-lh: 125%;
+  --text-preset-1-fw: 500;
+  --text-preset-2-fs: 18px;
+  --text-preset-2-lh: 145%;
+  --text-preset-2-fw: 300;
+  --text-preset-3-fs-sb: 1rem;
+  --text-preset-3-lh-sb: 125%;
+  --text-preset-3-fw-sb: 500;
+  --text-preset-3-fs-reg: 1rem;
+  --text-preset-3-lh-reg: 125%;
+  --text-preset-3-fw-reg: 400;
 }
 
 @font-face {
-  font-display: swap;
-  font-family: 'Outfit';
   font-style: normal;
   font-weight: 300;
   src: url('../fonts/outfit-v15-latin-300.woff2') format('woff2');
+  font-family: 'Outfit';
+  font-display: swap;
 }
 
 @font-face {
-  font-display: swap;
-  font-family: 'Outfit';
   font-style: normal;
   font-weight: 400;
   src: url('../fonts/outfit-v15-latin-regular.woff2') format('woff2');
+  font-family: 'Outfit';
+  font-display: swap;
 }
 
 @font-face {
-  font-display: swap;
-  font-family: 'Outfit';
   font-style: normal;
   font-weight: 500;
   src: url('../fonts/outfit-v15-latin-500.woff2') format('woff2');
+  font-family: 'Outfit';
+  font-display: swap;
 }
 
 /* || Main Styles */
+
+/* Typography */
+
+body {
+  font-family: 'Outfit', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  margin-block-end: 1rem;
+  color: var(--white);
+  font-weight: var(--text-preset-1-fw);
+  font-size: var(--text-preset-1-fs);
+  line-height: var(--text-preset-1-lh);
+}
+
+.description {
+  margin-block-end: 1.5rem;
+  color: var(--blue-500);
+  font-weight: var(--text-preset-2-fw);
+  font-size: var(--text-preset-2-fs);
+  line-height: var(--text-preset-2-lh);
+}
+
+.price,
+.time-left-container {
+  font-weight: var(--text-preset-3-fw-sb);
+  font-size: var(--text-preset-3-fs-sb);
+  line-height: var(--text-preset-3-lh-sb);
+}
+
+.price {
+  color: var(--cyan-400);
+}
+
+.time-left-container {
+  color: var(--blue-500);
+}
+
+.author {
+  color: var(--blue-500);
+  font-weight: var(--text-preset-2-fw);
+  font-size: var(--text-preset-2-fs);
+  line-height: var(--text-preset-2-lh);
+}
+
+span {
+  color: var(--white);
+}
+
+/* Style & Positioning */
 
 body {
   background-color: var(--blue-950);
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
 .card {
+  border-radius: 0.9375rem;
   background-color: var(--blue-900);
+  padding: 1.5rem;
+  width: 21.875rem;
+  height: 37.25rem;
+}
+
+.nft-img {
+  margin-block-end: 1.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: auto;
+}
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-end: 1.5rem;
+  width: 100%;
+}
+
+.price {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.time-left-container {
+  display: flex;
+  gap: 0.8rem;
+}
+
+hr {
+  margin-block-end: 1.5rem;
+  border: 0.005rem solid var(--blue-800);
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+}
+
+.avatar-img {
+  border: 0.1rem solid var(--white);
+  border-radius: 50%;
+  width: 2.0625rem;
+  height: 2.0625rem;
 }
