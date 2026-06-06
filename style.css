@@ -60,11 +60,17 @@ body {
 }
 
 h1 {
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
   margin-block-end: 1rem;
   color: var(--white);
   font-weight: var(--text-preset-1-fw);
   font-size: var(--text-preset-1-fs);
   line-height: var(--text-preset-1-lh);
+}
+
+h1:hover {
+  color: var(--cyan-400);
 }
 
 .description {
@@ -98,7 +104,13 @@ h1 {
 }
 
 span {
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
   color: var(--white);
+}
+
+span:hover {
+  color: var(--cyan-400);
 }
 
 /* Style & Positioning */
@@ -123,11 +135,46 @@ main {
   height: 37.25rem;
 }
 
-.nft-img {
+.nft-image-wrapper {
+  position: relative;
   margin-block-end: 1.5rem;
   border-radius: 0.5rem;
   width: 100%;
+  overflow: hidden;
+}
+
+.nft-img {
+  display: block;
+  width: 100%;
   height: auto;
+}
+
+.nft-image-wrapper::before {
+  position: absolute;
+  opacity: 0;
+  z-index: 99;
+  transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
+  inset: 1;
+  background-color: var(--cyan-400);
+  width: 100%;
+  height: 100%;
+  content: '';
+}
+
+.view-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 99;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.nft-image-wrapper:hover::before,
+.nft-image-wrapper:hover .view-img {
+  opacity: 0.5;
 }
 
 .price-container {
