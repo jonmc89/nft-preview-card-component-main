@@ -40,3 +40,11 @@
 }
 
 /* || Main Styles */
+
+body {
+  background-color: var(--blue-950);
+}
+
+.card {
+  background-color: var(--blue-900);
+}
