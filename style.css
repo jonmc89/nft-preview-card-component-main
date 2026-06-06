@@ -1,0 +1,42 @@
+/*|| Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue-500: hsl(215, 51%, 70%);
+  --cyan-400: hsl(178, 100%, 50%);
+  --blue-950: hsl(217, 54%, 11%);
+  --blue-900: hsl(216, 50%, 16%);
+  --blue-800: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/outfit-v15-latin-300.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/outfit-v15-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/outfit-v15-latin-500.woff2') format('woff2');
+}
+
+/* || Main Styles */
